@@ -69,13 +69,14 @@
         width: 45%;
         float: left;
         border: none;
+        padding-left: 20px;
     }
 
     .Model_selector{
         width: 45%;
         float: right;
         border: none;
-
+        padding-left: 25px;
     }
 
     #region{
