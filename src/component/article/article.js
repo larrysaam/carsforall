@@ -18,13 +18,13 @@ const Article = ()=>{
                 <h3 className='article_price'>Price : <span>{state.data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span></h3>
                 <div className='article_ul'>
                 <ul>
-                    <li><b>Location</b> :   {state.data.location}</li>
-                    <li><b>Fuel-Type</b> : {state.data.fuel}</li>
-                    <li> <b>Transmition</b>:   {state.data.transmition}</li>
-                    <li><b>A.C</b> :  { state.data.ac}</li>
-                    <li><b>Reverse Camera</b> :     {state.data.reverse_camera}</li>
-                    <li><b>Description</b>:    {state.data.description}</li>
-                    <li> <b>Age</b>:   {state.data.age}</li>
+                    <li><b>Emplacement</b> :   {state.data.location}</li>
+                    <li><b>Carburant</b> : {state.data.fuel}</li>
+                    <li> <b>Transmission</b>:   {state.data.transmition}</li>
+                    <li><b>Clime</b> :  { state.data.ac}</li>
+                    <li><b>Camera arriere</b> :     {state.data.reverse_camera}</li>
+                    <li><b>Description</b> :    {state.data.description}</li>
+                    <li> <b>Age</b> :   {state.data.age}</li>
                 </ul>
                 </div>
                 
