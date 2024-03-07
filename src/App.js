@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './pages/Home';
+import Article from './component/article/article';
+import Header from './component/header/header';
+import AdminHome from './pages/Admin';
+import Edit from './component/adminBoard/edit/edit';
+import { Route, Routes } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 
 function App() {
+
+  const [edit, setEdit] = useState({})
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header />
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/edit' element={<Edit edit={edit} setEdit={setEdit}/>}/>
+        <Route path='/article' element={<Article/>}/>
+        <Route path='/Adminforall2024' element={<AdminHome setEdit={setEdit}/>}/>
+      </Routes>
     </div>
   );
 }

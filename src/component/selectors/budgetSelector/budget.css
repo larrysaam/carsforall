@@ -1,0 +1,38 @@
+.price_range_div{
+    width: 100%;
+    padding: 10px 0;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.price_range_div h3{
+    font-size: 15px;
+}
+
+#price_range{
+    width: 90%;
+    accent-color: blue;
+}
+
+.price_value{
+    color: rgb(0, 0, 141);
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px){
+
+    .price_range_div{
+        visibility: visible;
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        line-height: 0px;
+        background-color: rgb(247, 247, 247);
+        border-top: 1px solid rgb(105, 105, 105);
+    }
+}

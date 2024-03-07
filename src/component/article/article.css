@@ -1,0 +1,193 @@
+.slider_main{
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+
+.slider_div{
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+}
+
+#main_vehicle_img{
+    min-height: 90%;
+    min-width: 400px;
+    border: 1px solid black;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+.slider_div button{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    border: none;
+    background-color: rgb(186, 186, 186);
+}
+
+.article_main_div{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.article_details{
+    width: 100%;
+}
+
+.article_name{
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.article_price{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.article_price span{
+    color: rgb(0, 0, 170);
+    font-size: 32px;
+}
+
+.article_ul{
+    margin: auto;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.article_ul ul li{
+    font-size: 17px;
+    text-align: left;
+    font-weight: 400;
+    padding-bottom: 7px;
+}
+
+
+.small_image_div{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#small_image{
+    min-height: 40px;
+    min-width: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0 10px 0 10px;
+}
+
+
+.whatsapp_btn_1{
+    height: 40px;
+    width: 130px;
+    border-radius: 7px;
+    display: flex;
+    border: none;
+    background-color: #128C7E;
+    font-size: 17px;
+    color: white;
+}
+
+#whatsapp_icon{
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+
+.whatsapp_btn:hover{
+    color: #128C7E;
+    background-color: white;
+    border: 2px solid #128C7E;
+}
+
+
+@media screen and (max-width: 600px){
+    .article_main_div{
+        max-width: 100%;
+        display: inline-block;
+        margin-bottom: 50px;
+        margin-top: -40px;
+    }
+
+    .slider_main{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(238, 238, 238);
+    }
+
+    .slider_div{
+        width: 100%;
+        min-height: 10%;
+        margin-left: 5px ;
+    }
+
+    #main_vehicle_img{
+        min-width: 70%;
+        height: 70%;
+        object-fit: contain;
+    }
+
+    .small_image_div{
+        display: none;
+        width: 100%;
+        background-color: blue;
+    }
+
+    .article_details{
+        
+    }
+
+    #whatsapp_icon{
+        height: 25px;
+        width: 25px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+
+    .whatsapp_btn_1{
+        height: 50px;
+        width: 150px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        cursor: pointer;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        animation: glowing 2s infinite;
+    }
+
+    @keyframes glowing {
+        0%{
+            background-color: #128C7E;
+            box-shadow: 0 0 20px #128C7E;
+        }
+
+        50%{
+            background-color: #128c4d;
+            box-shadow: 0 0 20px #128c4d;
+        }
+
+        100%{
+            background-color: #128c26;
+            box-shadow: 0 0 20px #128c26;
+        }
+    }
+}

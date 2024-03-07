@@ -1,0 +1,109 @@
+.navbar{
+    height: 90px;
+    width: 100%;
+    background-color: rgba(1, 0, 3, 0.72);
+    display: inline-block;
+}
+
+.info_div{
+    height: 30px;
+    padding-left: 30px;
+    border-bottom: 1px solid gray;
+}
+
+.info_div button{
+    color: white;
+    background: none;
+    border: none;
+}
+
+#logo{
+    line-height: 60px;
+    float: left;
+}
+
+#sell_btn{
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    height: 40px;
+    float: right;
+    background: none;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+
+#sell_btn:hover{
+    transition: 0.4s;
+    color: black;
+    border: none;
+    background-color: white;
+}
+
+#logo{
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width: 600px){
+    .navbar{
+        height: 70px;
+        width: 100%;
+        background-color: rgba(1, 0, 3, 0.72);
+        margin-bottom: 40px;
+    }
+    
+    .info_div{
+        height: 25px;
+        padding-left: 20px;
+        border-bottom: 1px solid gray;
+    }
+    
+    .info_div button{
+        font-size: 10px;
+        color: white;
+        background: none;
+        border: none;
+    }
+    
+    #logo{
+        line-height: 50px;
+        float: left;
+    }
+    
+    #sell_btn{
+        height: 25px;
+        margin-top: 10px;
+        margin-right: 10px;
+        float: right;
+        background: none;
+        line-height: 0px;
+        border-radius: 5px;
+        border: 2px solid white;
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+    
+    }
+    
+    #sell_btn:hover{
+        transition: 0.4s;
+        color: black;
+        border: none;
+        background-color: white;
+    }
+    
+    #logo{
+        width: 125px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+}

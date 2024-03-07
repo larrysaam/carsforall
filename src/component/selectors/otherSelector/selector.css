@@ -1,0 +1,90 @@
+.location_selector{
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.location_selector label{
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+#region{
+    width: 150px;
+    height: 30px;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+
+#region option{
+    font-size: 15px;
+    color: black;
+    padding: 10px 0;
+}
+
+#region:focus{
+    outline: none;
+}
+
+
+/* model */
+
+.Model_selector{
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.Model_selector label{
+    margin-right: 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+#car_type{
+    width: 150px;
+    height: 30px;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+
+#car_type option{
+    font-size: 15px;
+    color: black;
+}
+
+#car_type:focus{
+    outline: none;
+}
+
+
+@media screen and (max-width: 600px){
+    .location_selector{
+        width: 45%;
+        float: left;
+        border: none;
+    }
+
+    .Model_selector{
+        width: 45%;
+        float: right;
+        border: none;
+
+    }
+
+    #region{
+        border-radius: 10px;
+        padding: 0 5px;
+    }
+
+    #car_type{
+        border-radius: 10px;
+        padding: 0 5px;
+    }
+}
