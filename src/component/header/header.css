@@ -8,7 +8,7 @@
 .info_div{
     height: 30px;
     padding-left: 30px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(154, 154, 154);
 }
 
 .info_div button{

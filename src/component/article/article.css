@@ -16,7 +16,7 @@
 }
 
 #main_vehicle_img{
-    min-height: 90%;
+    max-height: 90%;
     min-width: 400px;
     border: 1px solid black;
     border-radius: 20px;
@@ -28,8 +28,15 @@
     width: 80px;
     border-radius: 40px;
     border: none;
-    background-color: rgb(186, 186, 186);
+    background: none;
 }
+
+
+#side_icon{
+    height: 30px;
+    width: 30px;
+}
+
 
 .article_main_div{
     display: flex;
@@ -134,9 +141,22 @@
     }
 
     #main_vehicle_img{
-        min-width: 70%;
-        height: 70%;
+        min-width: 360px;
+        max-width: 360px;
+        max-height: 80%;
+        min-height: 80%;
         object-fit: contain;
+    }
+
+    #side_btn_left{
+        position: absolute;
+        left: 0px;
+        background-color: rgba(255, 255, 255, 0.668);
+    }
+    #side_btn_right{
+        position: absolute;
+        right: 0px;
+        background-color: rgba(255, 255, 255, 0.668);
     }
 
     .small_image_div{
