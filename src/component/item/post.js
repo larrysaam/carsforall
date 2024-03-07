@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Post = ({data, made, model, images, price, age})=>{
 
+    const img_url = process.env.REACT_APP_IMG_URL
     const navigate = useNavigate()
 
     return(
@@ -14,8 +15,8 @@ const Post = ({data, made, model, images, price, age})=>{
             </div>
             <div>
                 <img
-                    src={"http://localhost:5000/"+images[0]} 
-                    alt={images[0]} 
+                    src={img_url+images[0]} 
+                    alt={img_url+images[0]} 
                     id='item_image' 
                 />
             </div>

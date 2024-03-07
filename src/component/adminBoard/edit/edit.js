@@ -5,6 +5,9 @@ import axios from 'axios'
 
 const Edit =({edit, setEdit})=>{
 
+    const api_url = process.env.REACT_APP_API_URL
+    const img_url = process.env.REACT_APP_IMG_URL
+    
     const imageArray = []
     const [images, setImages] = useState([])
     const [urlImages, setURLImages] = useState([])
@@ -29,8 +32,7 @@ const Edit =({edit, setEdit})=>{
         var edit_Length = Object.keys(edit).length
         setEdit_Length(edit_Length)
         if(edit_Length > 0){
-            console.log(edit)
-            console.log("edittttttttttt")
+
             setId(edit._id)
             setMade(edit.made)
             setModel(edit.model)
@@ -79,7 +81,7 @@ const Edit =({edit, setEdit})=>{
             console.log(fuel)
 
             //code
-            await axios.patch(`http://localhost:5000/vehicle/`,
+            await axios.patch(api_url,
                 {id, made, model, price, age, location, fuel, transmition, ac, reverse_camera, description, owner, tel},
                 {headers: {'Content-Type': 'application/json' }}
             ).then((response) => {
@@ -101,7 +103,7 @@ const Edit =({edit, setEdit})=>{
             
             await axios({
                 method: "post",
-                url: 'http://localhost:5000/vehicle',
+                url: api_url,
                 data: bodyFormData,
                 headers: { "Content-Type": "multipart/form-data" }}
             ).then((response) => {
@@ -133,7 +135,7 @@ const Edit =({edit, setEdit})=>{
                 {((edit_Length > 0))? 
                 
                 images.map(img =>{
-                    return(<img src={"http://localhost:5000/"+img} alt={"http://localhost:5000/"+img} id='edit_image'/>)
+                    return(<img src={img_url+img} alt={img} id='edit_image'/>)
                 })
                 : 
                 urlImages.map(img =>{

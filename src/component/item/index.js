@@ -5,7 +5,8 @@ import useFetchVehicle from '../../hook/useFetchVehicles'
 
 const Item = ({price, model, location, search})=>{
 
-    const {response, loading, error} = useFetchVehicle('http://localhost:5000/vehicle')
+    const api_url = process.env.REACT_APP_API_URL
+    const {response, loading, error} = useFetchVehicle(api_url)
     const [data, setData] = useState([])
 
     useEffect(()=>{

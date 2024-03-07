@@ -2,6 +2,8 @@ import './article.css'
 import { useState, useEffect } from 'react'
 
 const ImageSlider = ({images})=>{
+    const api_url = process.env.REACT_APP_API_URL
+    const img_url = process.env.REACT_APP_IMG_URL
 
     const [image, setImage] = useState('')
     const [imageLen, setImageLen] = useState(null)
@@ -41,12 +43,12 @@ const ImageSlider = ({images})=>{
         <div className='slider_main'>
             <div className='slider_div'>
                 <button onClick={()=>slideLeft()}> Left </button>
-                <img src={"http://localhost:5000/"+image} alt={"http://localhost:5000/"+image} id='main_vehicle_img'/>
+                <img src={img_url+image} alt={img_url+image} id='main_vehicle_img'/>
                 <button onClick={()=>slideRight()}> Right </button>
             </div>
             <div className='small_image_div'>
-                <img src={"http://localhost:5000/"+images[1]} alt='small' id='small_image'/>
-                <img src={"http://localhost:5000/"+images[2]} alt='small' id='small_image'/>
+                <img src={img_url+images[1]} alt='small' id='small_image'/>
+                <img src={img_url+images[2]} alt='small' id='small_image'/>
             </div>
             <h2>1/5</h2>
         </div>

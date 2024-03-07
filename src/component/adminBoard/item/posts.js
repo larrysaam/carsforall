@@ -4,6 +4,9 @@ import axios from 'axios';
 
 
 const Item = ({data, made, model, images, price, tel, setEdit})=>{
+    
+    const api_url = process.env.REACT_APP_API_URL
+    const img_url = process.env.REACT_APP_IMG_URL
 
     const navigate = useNavigate()
 
@@ -13,7 +16,7 @@ const Item = ({data, made, model, images, price, tel, setEdit})=>{
     }
 
     const handledelete =async()=>{
-        await axios.delete(`http://localhost:5000/vehicle/${data._id}`)
+        await axios.delete(`${api_url}${data._id}`)
         .then(res=>{
             alert("deleted successfuly")
         })
@@ -29,8 +32,8 @@ const Item = ({data, made, model, images, price, tel, setEdit})=>{
             </div>
             <div>
                 <img
-                    src={"http://localhost:5000/" + images[0]} 
-                    alt={"http://localhost:5000/" + images[0]}
+                    src={img_url + images[0]} 
+                    alt={images[0]}
                     id='item_image'
                 />
             </div>

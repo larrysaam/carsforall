@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react'
 import useFetchVehicle from '../../../hook/useFetchVehicles'
 
 const Item = ({price, model, location, search , setEdit})=>{
+    const api_url = process.env.REACT_APP_API_URL
+    const img_url = process.env.REACT_APP_IMG_URL
 
-    const {response, loading, error} = useFetchVehicle('http://localhost:5000/vehicle')
+    const {response, loading, error} = useFetchVehicle(api_url)
     const [data, setData] = useState([])
 
     useEffect(()=>{
