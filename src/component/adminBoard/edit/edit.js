@@ -96,8 +96,8 @@ const Edit =({edit, setEdit})=>{
 
         }else{
             //code   
-            console.log(images)
-            for(const file of images){
+            console.log(urlImages)
+            for(const file of urlImages){
                 bodyFormData.append('images', file);
             }
             
