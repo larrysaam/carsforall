@@ -3,7 +3,7 @@ import {useState} from 'react';
 
 const Budget = ({setVehiclePrice})=>{
 
-    const [price, setPrice] = useState(1000000)
+    const [price, setPrice] = useState(2000000)
 
     return(
         <div className="price_range_div">
