@@ -1,7 +1,8 @@
 import './posts.css'
 import Post from './post'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, CSSProperties } from 'react'
 import useFetchVehicle from '../../hook/useFetchVehicles'
+import ClipLoader from "react-spinners/ClipLoader";
 
 const Item = ({price, model, location, search})=>{
 
@@ -30,7 +31,13 @@ const Item = ({price, model, location, search})=>{
     return(
         <div className="main">
             {error && <h2>Error Occured!</h2>}
-            {loading && <h2>Loading...</h2>}
+            {loading && <ClipLoader
+                color={'#0000ff'}
+                loading={loading}
+                size={150}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+            />}
             {response &&
                 data.map((vehicle, index)=>{
                     return(<Post data={vehicle} made={vehicle.made} model={vehicle.model} images={vehicle.images} price={vehicle.price} age={vehicle.age} key={index}/>)
