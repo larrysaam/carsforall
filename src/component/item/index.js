@@ -10,10 +10,7 @@ const Item = ({price, model, location, search})=>{
     const [data, setData] = useState([])
 
     useEffect(()=>{
-        console.log(response)
-        console.log(price)
-        console.log(location)
-        console.log(model)
+        setData(response)
         if(model === "All"){
             const newdata = response.filter(item =>( parseInt(item.price) <= price)  && item.location === location)
             setData(newdata)
@@ -32,8 +29,8 @@ const Item = ({price, model, location, search})=>{
 
     return(
         <div className="main">
-            {error && <p>Error Occured!</p>}
-            {loading && <p>Loading...</p>}
+            {error && <h2>Error Occured!</h2>}
+            {loading && <h2>Loading...</h2>}
             {response &&
                 data.map((vehicle, index)=>{
                     return(<Post data={vehicle} made={vehicle.made} model={vehicle.model} images={vehicle.images} price={vehicle.price} age={vehicle.age} key={index}/>)
