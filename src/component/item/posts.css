@@ -1,10 +1,10 @@
 
 .post_div{
     width: 300px;
-    height: 500px;
+    height: 520px;
     border-radius: 10px;
     margin: 10px;
-    background-color: rgb(238, 238, 238);
+    background-color: white;
     border: 1px solid gray;
     padding: 0;
 }
@@ -38,9 +38,15 @@
     line-height: 10px;
 }
 
+
+
 .details_ul_div p{
+    width: 100%;
     line-height: 10px;
-    font-size: 14px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .item_list_details  span{
@@ -143,6 +149,16 @@
     color: white;
 }
 
+#article_icons{
+    height: 20px;
+    width: 19px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 30px;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+
 @media screen and (max-width: 600px){
 
     .main{
@@ -155,19 +171,18 @@
     }
 
     .post_div{
-        width: 250px;
-        height: 450px;
+        width: 95%;
+        height: 480px;
         margin: auto;
         margin-top: 50px;
-        background-color: rgb(238, 238, 238);
-        border-radius: 10px;
+        border-radius:5px;
     }
 
     #item_image{
-        width: 100%;
-        max-height: 240px;
-        min-height: 240px;
-        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+        min-height: 100%;
+        object-fit: cover;
     }
 
     #whatsapp_icon{
@@ -180,16 +195,32 @@
     .item_list_header{
         height: 30px;
         width: 100%;
-        margin-top: -10px;
+        margin-top: -20px;
+        margin-bottom: 30px;
         text-align: center;
     }
 
     .item_list_header h3{
-        font-size: 18px;
+        font-size: 30px;
         font-weight: 600;
     }
 
     .item_list_details{
         max-height: fit-content;
+    }
+
+    .listing_img_div{
+        padding: 0;
+        width: 100%;
+        height: 260px;
+    }
+
+    .item_list_details  span{
+        color: rgb(26, 0, 176);
+        font-size: 24px;
+    }
+
+    .details_ul_div{
+        margin-bottom: 30px;
     }
 }

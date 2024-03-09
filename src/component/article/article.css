@@ -18,8 +18,9 @@
 #main_vehicle_img{
     max-height: 90%;
     min-width: 400px;
+    max-width: 400px;
     border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 7px;
     object-fit: contain;
 }
 
@@ -71,10 +72,12 @@
 }
 
 .article_ul ul li{
-    font-size: 17px;
+    font-size: 20px;
     text-align: left;
     font-weight: 400;
     padding-bottom: 7px;
+    display: flex;
+
 }
 
 
@@ -119,6 +122,15 @@
     border: 2px solid #128C7E;
 }
 
+#article_icons{
+    height: 20px;
+    width: 19px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 30px;
+    padding: 5px;
+    margin-right: 15px;
+}
+
 
 @media screen and (max-width: 600px){
     .article_main_div{
@@ -141,8 +153,8 @@
     }
 
     #main_vehicle_img{
-        min-width: 360px;
-        max-width: 360px;
+        min-width: 100%;
+        max-width: 100%;
         max-height: 80%;
         min-height: 80%;
         object-fit: contain;
@@ -160,9 +172,7 @@
     }
 
     .small_image_div{
-        display: none;
         width: 100%;
-        background-color: blue;
     }
 
     .article_details{

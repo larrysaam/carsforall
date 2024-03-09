@@ -69,10 +69,14 @@
         display: flex;
         align-items: center;
         text-align: center;
-        width: 45%;
+        width: 43%;
         float: left;
         border: none;
         padding-left: 20px;
+    }
+
+    .location_selector label{
+        color: white;
     }
 
     .Model_selector{
@@ -80,10 +84,14 @@
         align-items: center;
         text-align: center;
         line-height: 0px;
-        width: 45%;
+        width: 43%;
         float: right;
         border: none;
         padding-left: 25px;
+    }
+
+    .Model_selector label{
+        color: white;
     }
 
     #region{

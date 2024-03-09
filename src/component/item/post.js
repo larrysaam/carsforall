@@ -1,6 +1,8 @@
 import './posts.css'
 import seeicon from '../../assets/view.png'
 import logo from '../../assets/whatsapp.png'
+import calenda from '../../assets/calenda.png'
+
 import { useNavigate } from 'react-router-dom'
 
 const Post = ({data, made, model, images, price, age})=>{
@@ -10,21 +12,21 @@ const Post = ({data, made, model, images, price, age})=>{
 
     return(
         <div className='post_div'>
-            <div className='item_list_header'>
-                <h3>{made} {model}</h3>
-            </div>
-            <div>
+            <div className='listing_img_div'>
                 <img
                     src={img_url+images[0]} 
                     alt={img_url+images[0]} 
                     id='item_image' 
                 />
             </div>
+            <div className='item_list_header'>
+                <h3>{made} {model}</h3>
+            </div>
             <div className='item_list_details'>
-                <h4>Prix: <span>{price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span></h4>
+            
+                <h4>Prix: <span>{price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span> <b>FCFA</b></h4>
                 <div className='details_ul_div'>
-                        <p> <b>Model: </b> {model}</p>
-                        <p> <b>age: </b> {age}</p>
+                        <p><img src={calenda} alt='' id='article_icons' /> <b>age: </b> {age}</p>
                 </div>
                 <div className='btn_div'>
                     <button className='whatsapp_btn'  onClick={()=>{window.location.href = 'https://wa.link/70d550'}}><img src={logo} alt='.' id='whatsapp_icon'/>  Whatsapp </button>

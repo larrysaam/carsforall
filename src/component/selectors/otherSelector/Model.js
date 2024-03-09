@@ -11,8 +11,8 @@ const Model = ({setVehicleModel})=>{
             <select id='car_type' onChange={(e)=>{setModel(e.target.value); setVehicleModel(e.target.value)}}>
                 <option value="All">All</option>
                 <option value="Yaris">Yaris</option>
-                <option value="Runx">Runx</option>
-                <option value="Hignlander">Hignlander</option>
+                <option value="Ford">Ford</option>
+                <option value="Prado">Prado</option>
                 <option value="Fortuner">Fortuner</option>
             </select>
         </div>
