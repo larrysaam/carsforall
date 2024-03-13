@@ -32,7 +32,7 @@ const Item = ({data, made, model, images, price, tel, setEdit})=>{
             </div>
             <div>
                 <img
-                    src={img_url + images[0]} 
+                    src={images[0]} 
                     alt={images[0]}
                     id='item_image'
                 />

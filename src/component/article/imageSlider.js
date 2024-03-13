@@ -4,9 +4,6 @@ import right from '../../assets/right.png'
 import { useState, useEffect } from 'react'
 
 const ImageSlider = ({images})=>{
-    const api_url = process.env.REACT_APP_API_URL
-    const img_url = process.env.REACT_APP_IMG_URL
-
     useEffect(()=>{
 
     },[])
@@ -67,7 +64,7 @@ const ImageSlider = ({images})=>{
                     images.map((image, index)=>{
                         return(
                             <div>
-                                { (index === current) && <img src={img_url+image} alt={img_url+image} id='main_vehicle_img'/>}
+                                { (index === current) && <img src={image} alt={image} id='main_vehicle_img'/>}
                             </div>
                         )
                     })
@@ -77,7 +74,7 @@ const ImageSlider = ({images})=>{
             <div className='small_image_div'>
                 {images.map((img, index)=>{
                     return(
-                        <img src={img_url+img} alt={img_url+img[index]} id='small_image'/>
+                        <img src={img} alt={img[index]} id='small_image'/>
                     )
                 })}
                 </div>

@@ -135,7 +135,7 @@ const Edit =({edit, setEdit})=>{
                 {((edit_Length > 0))? 
                 
                 images.map(img =>{
-                    return(<img src={img_url+img} alt={img} id='edit_image'/>)
+                    return(<img src={img} alt={img} id='edit_image'/>)
                 })
                 : 
                 urlImages.map(img =>{
